@@ -3,20 +3,33 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' http://www.google.com">
     <title>Popup</title>
     <link rel="stylesheet" href="popup.css">
-    <style>
-      body {
-        width: 300px;
-        height: 200px;
-        padding: 5px;
-      }
-    </style>
   </head>
   <body>
-    <h1>My Popup</h1>
-    <p id="message">Loading...</p>
+    <div class="form-container">
+      <h1>NLP Query</h1>
+      <div id="form">
+        <select id="language" name="language" required>
+          <option value="lucene" selected>Lucene Query Language (Elasticsearch)</option>
+          <option value="sql">SQL (McAfee's Enterprise Security Manager)</option>
+          <option value="spl">Splunk's Search Processing Language (SPL)</option>
+          <option value="kql">Azure Log Analytics Query Language (KQL)</option>
+          <option value="cql">CQL (Cassandra Query Language)</option>
+        </select>
 
-    <script src="popup.js"></script>
+        <label for="prompt">Prompt</label>
+        <input type="text" id="prompt" name="prompt" placeholder="Display all machines with port 8080 open..." required>
+
+        <button class="submit" id="submit">Submit</button>
+
+        <label for="response">Response</label>
+        <textarea id="response" name="response" value=""></textarea>
+        <div class="ambient"></div>
+      </div>
+    </div>
+    <script src="vue.min.js" defer></script>
+    <script src="popup.js" defer></script>
   </body>
 </html>
