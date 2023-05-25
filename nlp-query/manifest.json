@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+
+  "name": "NLP Query",
+  "version": "1.0",
+  "description": "Translate natural language into SIEM queries.",
+  "author": "Christopher Woodall",
+
+
+  "icons": {
+    "48": "assets/icons/48x48.png"
+  },
+
+  "action": {
+    "default_title": "NLP Query",
+    "default_popup": "popup/popup.html",
+    "default_area": "navbar",
+    "default_icon": {
+      "16": "assets/icons/16x16.png",
+      "32": "assets/icons/32x32.png"
+    }
+  },
+
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+
+  "background": {
+    "page": "background/background.html"
+  },
+
+  "permissions": [
+    "activeTab"
+  ]
+}
