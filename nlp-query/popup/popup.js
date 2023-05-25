@@ -1,5 +1,10 @@
 // TODO:
 //   - Add more Open AI models to Options page
+const OPENAI_API_URL = `https://api.openai.com/v1/chat/completions`  // see: https://platform.openai.com/docs/api-reference/chat
+const OPENAI_MODEL = `gpt-3.5-turbo`  // see: https://platform.openai.com/docs/models/model-endpoint-compatibility
+const OPENAI_MAX_TOKENS = 500
+const OPENAI_TEMPERATURE = 0.3
+const OPENAI_TOP_P = 1
 
 const LanguageMap = {
   "lucene": "Lucene Query Language (Elasticsearch)",
@@ -42,12 +47,6 @@ const generatePrompt = (target_language, query) => {
 
 const senRequest = async (query) => {
   const OPENAI_API_KEY = await readLocalStorage("openai_api_key")
-  const OPENAI_API_URL = `https://api.openai.com/v1/chat/completions`  // see: https://platform.openai.com/docs/api-reference/chat
-  const OPENAI_MODEL = `gpt-3.5-turbo`  // see: https://platform.openai.com/docs/models/model-endpoint-compatibility
-  const OPENAI_MAX_TOKENS = 500
-  const OPENAI_TEMPERATURE = 0.3
-  const OPENAI_TOP_P = 1
-  let GENERATED_MESSAGE = generatePrompt(document.getElementById("language").value, query);
 
   const response = await fetch(OPENAI_API_URL, {
     method: 'POST',
@@ -57,7 +56,7 @@ const senRequest = async (query) => {
     },
     body: JSON.stringify({
       "model": OPENAI_MODEL,
-      "messages": GENERATED_MESSAGE,
+      "messages": generatePrompt(document.getElementById("language").value, query),
       "temperature": OPENAI_TEMPERATURE,
     })
   });
