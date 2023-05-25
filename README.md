@@ -3,6 +3,9 @@ A Firefox extension to translate natural language queries into search queries fo
 
 ---
 
+## Pre-requisites
+  - [OpenAI API Key](https://openai.com/)
+
 ## Load the Extension into Firefox
 Clone the repository:
 ```bash
