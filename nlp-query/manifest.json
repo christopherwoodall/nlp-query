@@ -6,6 +6,11 @@
   "description": "Translate natural language into SIEM queries.",
   "author": "Christopher Woodall",
 
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "nlp-query@emptytextfile.com"
+    }
+  },
 
   "icons": {
     "48": "assets/icons/48x48.png"
