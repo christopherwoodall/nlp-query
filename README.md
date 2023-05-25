@@ -14,14 +14,13 @@ Now you can load the extension into Firefox. Open Firefox and go to `about:debug
 ---
 
 ## Supported Query Languages
-  - Lucene
-  - Kibana Query Language (KQL)
-  - Search Processing Language (SPL)
+  - Lucene Query Language (Elasticsearch)",
+  - SQL (McAfee's Enterprise Security Manager)",
+  - Splunk's Search Processing Language (SPL)",
+  - Azure Log Analytics Query Language (KQL)",
+  - CQL (Cassandra Query Language)",
 
 ---
 
-# Notes
-## [Debugging Firefox Popups](https://extensionworkshop.com/documentation/develop/debugging/)
-  1. Enter about:debugging in the URL bar.
-  2. In the left-hand menu, click This Firefox (or This Nightly).
-  3. Click Inspect next to your extension.
+# Demo
+![NLP Query Demo](docs/assets/demo.gif)
