@@ -26,11 +26,8 @@
     "open_in_tab": true
   },
 
-  "background": {
-    "page": "background/background.html"
-  },
-
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "storage"
   ]
 }
