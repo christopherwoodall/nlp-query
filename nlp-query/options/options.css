@@ -56,6 +56,7 @@ button {
   -webkit-font-smoothing: antialiased;
   font-weight: bold;
   margin: 0;
+  margin-top: 1em;
   width: 100%;
   text-align: center;
 }
@@ -68,27 +69,4 @@ button:hover, button:focus {
 button:active {
   opacity: 1;
   box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1) inset;
-}
-
-.btn {
-  border: 0 none;
-  border-radius: 6px 6px 6px 6px;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
-  font-size: 1.125em;
-  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  margin: 0 0.625em;
-  outline: 0 none;
-  text-decoration: none;
-  line-height: inherit;
-  padding: 0.875em 1.125em;
-  margin-bottom: 0.625em;
-}
-.btn:hover {
-  color: #fff;
 }
