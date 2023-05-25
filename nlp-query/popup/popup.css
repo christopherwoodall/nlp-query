@@ -1,0 +1,99 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  background-color: #050a30;
+  -webkit-font-smoothing: antialiased;
+  cursor: default;
+}
+
+body, input, button {
+  color: white;
+}
+
+#form {
+  background-color: rgba(113, 55, 112, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 50px auto;
+  max-width: 500px;
+  position: relative;
+  height: 800px;
+  width: 90%;
+  font-size: 16px;
+}
+
+input, button, textarea, select {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  color: white;
+  font-size: 16px;
+}
+
+option {
+  background-color: #b34270;
+  color: white;
+}
+
+button, input[type=submit] {
+  background-color: #432f70;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+}
+
+/* Add the ambilight effect */
+#form:before, #form:after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  bottom: -15px;
+  left: -15px;
+  z-index: -1;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+#form:before {
+  box-shadow: inset 0px 0px 20px 5px rgba(113, 55, 112, 0.7);
+}
+#form:after {
+  background-image: linear-gradient(135deg, #713770 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+/* Add the ambilight effect on hover */
+#form:hover:before {
+  box-shadow: inset 0px 0px 20px 5px rgba(233, 86, 112, 0.7);
+}
+#form:hover:after {
+  background-image: linear-gradient(135deg, #e95670 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+/* Make the #form responsive */
+@media (max-width: 768px) {
+  #form {
+    max-width: 90%;
+    height: auto;
+    font-size: 14px;
+  }
+  input, button, textarea, select {
+    font-size: 14px;
+  }
+}
