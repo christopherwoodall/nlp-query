@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "NLP Query",
+  "version": "1.0",
+  "description": "Translate natural language into SIEM queries.",
+  "browser_action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "48": "icons/48x48.png",
+      "96": "icons/96x96.png"
+    }
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "permissions": ["storage"]
+}
