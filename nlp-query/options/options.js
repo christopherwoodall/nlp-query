@@ -9,5 +9,8 @@ document.getElementById("save").addEventListener("click", () => {
 
 // Restore the saved settings when the page is loaded.
 browser.storage.local.get("openai_api_key").then((result) => {
-  document.getElementById("openai_api_key").value = result.openai_api_key || "e.g. sk-*********************";
+  let openai_api_key = result.openai_api_key || false;
+  if (result.openai_api_key) {
+    document.getElementById("openai_api_key").value = result.openai_api_key;
+  }
 });
