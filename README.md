@@ -1,12 +1,15 @@
 # NLP Query
-A Firefox extension to translate natural language queries into search queries for various search engines.
+A [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/nlp-query/) to translate natural language queries into search queries for various search engines.
 
 ---
+
+# Setup
+[Try it now](https://addons.mozilla.org/en-US/firefox/addon/nlp-query/), or follow the steps below to get started locally.
 
 ## Pre-requisites
   - [OpenAI API Key](https://openai.com/)
 
-## Load the Extension into Firefox
+## Install Locally
 Clone the repository:
 ```bash
 git clone git@github.com:christopherwoodall/nlp-query.git
