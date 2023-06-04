@@ -22,7 +22,10 @@ Clone the repository:
 git clone git@github.com:christopherwoodall/nlp-query.git
 ```
 
-Now you can load the extension into Firefox. Open Firefox and go to `about:debugging#/runtime/this-firefox`. Click "Load Temporary Add-on…" and select the `manifest.json` file located inside the `nlp-query/nlp-query` directory. Now you should see your extension in the list of extensions and in the browser's toolbar.
+Now you can load the extension into Firefox.
+  1. Open Firefox and go to `about:debugging#/runtime/this-firefox`.
+  2. Click "Load Temporary Add-on…" and select the `manifest.json` file located inside the `nlp-query/nlp-query` directory.
+  3. Now you should see your extension in the list of extensions and in the browser's toolbar.
 
 ---
 
