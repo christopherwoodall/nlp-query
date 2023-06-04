@@ -1,0 +1,71 @@
+{
+
+  "manifest_version": 2,
+  "name": "Analyst Toolbox",
+  "description": "Tools for analyst.",
+  "version": "0.0.4",
+
+  "icons": {
+    "48": "img/icon.png"
+  },
+
+  "browser_action": {
+    "browser_style": true,
+    "default_title": "Analyst Toolbox",
+    "default_popup": "popover.html",
+    "default_icon": {
+      "16": "img/16.png",
+      "32": "img/32.png"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*",
+        "file://*/*"
+      ],
+      "js": [
+        "js/modules/analyst-app.module.ipv4.js",
+        "js/modules/analyst-app.module.domain.js",
+        "js/analyst-app.js"
+      ],
+      "css": [
+        "css/analyst-toolbox.css"
+      ],
+      "all_frames": true,
+      "match_about_blank": false,
+      "run_at": "document_end"
+    }
+  ],
+
+  "background": {
+    "page": "background.html"
+  },
+
+  "options_ui": {
+    "page": "dashboard.html",
+    "open_in_tab": true
+  },
+
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "clipboardWrite",
+    "webNavigation",
+    "webRequest",
+    "dns",
+    "menus",
+    "privacy",
+    "storage",
+    "tabs",
+    "unlimitedStorage",
+    "<all_urls>"
+  ],
+
+  "web_accessible_resources": [
+    "/resources/*"
+  ]
+
+}
