@@ -1,0 +1,74 @@
+{
+
+  "manifest_version": 2,
+  "name": "Analyst Toolbox",
+  "description": "Tools for analyst.",
+  "version": "0.0.4",
+
+  "icons": {
+    "16": "img/16.png",
+    "32": "img/32.png",
+    "48": "img/48.png",
+    "72": "img/72.png"
+  },
+
+  "browser_action": {
+    "default_title": "Analyst Toolbox",
+    "default_popup": "html/options.html",
+    "default_icon": {
+      "16": "img/16.png",
+      "32": "img/32.png",
+      "48": "img/48.png",
+      "72": "img/72.png"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*",
+        "file://*/*"
+      ],
+      "js": [
+        "js/modules/analyst-app.module.ipv4.js",
+        "js/modules/analyst-app.module.domain.js",
+        "js/analyst-toolbox.js"
+      ],
+      "css": [
+        "css/analyst-toolbox.css"
+      ],
+      "all_frames": true,
+      "match_about_blank": false,
+      "run_at": "document_end"
+    }
+  ],
+
+  "background": {
+    "page": "html/background.html"
+  },
+
+  "options_page": "html/options.html",
+  "options_ui": {
+    "page": "html/options.html",
+    "open_in_tab": true
+  },
+
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "clipboardWrite",
+    "webNavigation",
+    "webRequest",
+    "privacy",
+    "storage",
+    "tabs",
+    "unlimitedStorage",
+    "<all_urls>"
+  ],
+
+  "web_accessible_resources": [
+    "/resources/*"
+  ]
+
+}
