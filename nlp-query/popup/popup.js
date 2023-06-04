@@ -1,7 +1,10 @@
 // TODO:
 //   - Add more Open AI models to Options page
-const OPENAI_API_URL = `https://api.openai.com/v1/chat/completions`  // see: https://platform.openai.com/docs/api-reference/chat
-const OPENAI_MODEL = `gpt-3.5-turbo`  // see: https://platform.openai.com/docs/models/model-endpoint-compatibility
+
+// see: https://platform.openai.com/docs/api-reference/chat
+const OPENAI_API_URL = `https://api.openai.com/v1/chat/completions`
+// see: https://platform.openai.com/docs/models/model-endpoint-compatibility
+const OPENAI_MODEL = `gpt-3.5-turbo`
 const OPENAI_MAX_TOKENS = 500
 const OPENAI_TEMPERATURE = 0.3
 const OPENAI_TOP_P = 1
